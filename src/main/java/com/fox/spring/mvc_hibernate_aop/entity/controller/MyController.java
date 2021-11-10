@@ -22,4 +22,13 @@ public class MyController {
         model.addAttribute("allEmps", allEmployees);
         return "all-employees";
     }
+
+    @RequestMapping(name = "/addNewEmployee")
+    public String addNewEmployee(Model model) {
+
+        Employee employee = new Employee();
+        model.addAttribute("employee", employee);
+
+        return "employee-info";
+    }
 }
